@@ -219,6 +219,7 @@ bindsym $mod+button3 floating toggle
 # Take a screenshot upon pressing $mod+PrintScreen (select an area) or PrintScreen (window) -- kod date _moraju_ ići kosi navodnici (da se izvrši)
 bindsym --release $mod+Print exec --no-startup-id import /home/dbanic/Documents/Pictures/screenshots/$(date +%Y-%m-%d_%H:%M:%S).png && sleep 1 && notify-send -t 2000 "Screenshot saved"
 bindsym --release Print exec --no-startup-id import -window root /home/dbanic/Documents/Pictures/screenshots/$(date +%Y-%m-%d_%H:%M:%S).png && sleep 1 && notify-send -t 2000 "Screenshot saved"
+bindsym $mod+Shift+Print exec --no-startup-id cd /home/dbanic/Documents/Pictures/screenshots && xclip -selection clipboard -t image/png $(ls -r | head -1)
 
 # shortcuts for applications
 #bindsym $mod+F2 exec --no-startup-id DESKTOP_SESSION=kde dolphin
